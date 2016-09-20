@@ -19,8 +19,7 @@ with open('HISTORY.rst') as history_file:
 
 packages = set(open("requirements.txt", "r").read().splitlines())
 
-requirements = filter(lambda x: "http" not in x, packages)
-
+requirements = list(filter(lambda x: "http" not in x, packages))
 
 test_requirements = [
     # TODO: put package test requirements here
@@ -28,7 +27,7 @@ test_requirements = [
 
 setup(
     name='polyglot',
-    version='15.10.03',
+    version='16.07.04',
     description='Polyglot is a natural language pipeline that supports massive multilingual applications.',
     long_description=readme + '\n\n' + history,
     author='Rami Al-Rfou',
